@@ -1,0 +1,100 @@
+{
+  "turn": 1,
+  "turnPhase": "orders",
+  "armies": [
+    {
+      "id": "a-1",
+      "name": "1st Panhandle Infantry",
+      "faction": "A",
+      "type": "infantry",
+      "q": 1,
+      "r": 4,
+      "strength": 5
+    },
+    {
+      "id": "a-2",
+      "name": "Capitol Guard",
+      "faction": "A",
+      "type": "infantry",
+      "q": 5,
+      "r": 8,
+      "strength": 4
+    },
+    {
+      "id": "a-3",
+      "name": "Gator Cavalry",
+      "faction": "A",
+      "type": "cavalry",
+      "q": 10,
+      "r": 14,
+      "strength": 3
+    },
+    {
+      "id": "a-4",
+      "name": "Northern Mech",
+      "faction": "A",
+      "type": "mech",
+      "q": 12,
+      "r": 5,
+      "strength": 6
+    },
+    {
+      "id": "b-1",
+      "name": "Orlando Battle Group",
+      "faction": "B",
+      "type": "mech",
+      "q": 10,
+      "r": 16,
+      "strength": 5
+    },
+    {
+      "id": "b-2",
+      "name": "Bay Infantry",
+      "faction": "B",
+      "type": "infantry",
+      "q": 6,
+      "r": 18,
+      "strength": 4
+    },
+    {
+      "id": "b-3",
+      "name": "Coastal Raiders",
+      "faction": "B",
+      "type": "cavalry",
+      "q": 13,
+      "r": 13,
+      "strength": 3
+    },
+    {
+      "id": "b-4",
+      "name": "South Florida Column",
+      "faction": "B",
+      "type": "infantry",
+      "q": 12,
+      "r": 26,
+      "strength": 7
+    }
+  ],
+  "ownership": {
+    "1,4": "A",
+    "4,4": "A",
+    "5,8": "A",
+    "8,11": "A",
+    "12,5": "A",
+    "13,13": "B",
+    "10,16": "B",
+    "6,18": "B",
+    "8,23": "B",
+    "12,26": "B"
+  },
+  "players": [
+    { "id": "p1", "name": "Alex (Faction A)", "faction": "A" },
+    { "id": "p2", "name": "Blake (Faction B)", "faction": "B" },
+    { "id": "p3", "name": "Casey (Faction A)", "faction": "A" },
+    { "id": "p4", "name": "Dana (Faction B)", "faction": "B" }
+  ],
+  "sitrep": [
+    "Campaign Week 1 begins. Generals may submit move and scout orders on the hex map.",
+    "Demo tip: move Gator Cavalry (A) from the hex north of Orlando into Orlando to force contact with Orlando Battle Group (B)."
+  ]
+}

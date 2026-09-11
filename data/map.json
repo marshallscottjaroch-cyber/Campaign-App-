@@ -1,0 +1,88 @@
+{
+  "regions": [
+    {
+      "id": "pensacola",
+      "name": "Pensacola",
+      "x": 8,
+      "y": 18,
+      "adjacent": ["panama-city", "tallahassee"]
+    },
+    {
+      "id": "panama-city",
+      "name": "Panama City",
+      "x": 22,
+      "y": 16,
+      "adjacent": ["pensacola", "tallahassee", "jacksonville"]
+    },
+    {
+      "id": "tallahassee",
+      "name": "Tallahassee",
+      "x": 28,
+      "y": 28,
+      "adjacent": ["pensacola", "panama-city", "jacksonville", "gainesville"]
+    },
+    {
+      "id": "jacksonville",
+      "name": "Jacksonville",
+      "x": 48,
+      "y": 14,
+      "adjacent": ["panama-city", "tallahassee", "st-augustine", "gainesville", "daytona"]
+    },
+    {
+      "id": "st-augustine",
+      "name": "St. Augustine",
+      "x": 58,
+      "y": 28,
+      "adjacent": ["jacksonville", "gainesville", "daytona"]
+    },
+    {
+      "id": "gainesville",
+      "name": "Gainesville",
+      "x": 40,
+      "y": 38,
+      "adjacent": ["tallahassee", "jacksonville", "st-augustine", "orlando", "tampa"]
+    },
+    {
+      "id": "daytona",
+      "name": "Daytona",
+      "x": 68,
+      "y": 40,
+      "adjacent": ["jacksonville", "st-augustine", "orlando", "miami"]
+    },
+    {
+      "id": "orlando",
+      "name": "Orlando",
+      "x": 52,
+      "y": 52,
+      "adjacent": ["gainesville", "daytona", "tampa", "fort-myers"]
+    },
+    {
+      "id": "tampa",
+      "name": "Tampa",
+      "x": 38,
+      "y": 58,
+      "adjacent": ["gainesville", "orlando", "fort-myers"]
+    },
+    {
+      "id": "fort-myers",
+      "name": "Fort Myers",
+      "x": 48,
+      "y": 72,
+      "adjacent": ["orlando", "tampa", "miami", "key-west"]
+    },
+    {
+      "id": "miami",
+      "name": "Miami",
+      "x": 72,
+      "y": 78,
+      "adjacent": ["daytona", "fort-myers", "key-west"]
+    },
+    {
+      "id": "key-west",
+      "name": "Key West",
+      "x": 58,
+      "y": 92,
+      "adjacent": ["fort-myers", "miami"]
+    }
+  ]
+}

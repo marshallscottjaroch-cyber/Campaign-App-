@@ -1,0 +1,74 @@
+{
+  "_note": "PROVISIONAL balance placeholders — dial after playtest. Architecture (hex MP pathfinding, terrain/edge types, vision radius FoW) is locked; numeric values are NOT campaign defaults.",
+  "turnLabel": "Campaign Week",
+  "moveRates": {
+    "_note": "provisional — dial after playtest",
+    "infantry": 3,
+    "cavalry": 5,
+    "mech": 4
+  },
+  "terrainCosts": {
+    "_note": "provisional — dial after playtest; sea/null = impassable",
+    "clear": 1,
+    "urban": 1,
+    "coast": 1,
+    "hill": 1,
+    "rough": 2,
+    "swamp": 2,
+    "forest": 2,
+    "sea": null
+  },
+  "vision": {
+    "_note": "provisional — dial after playtest",
+    "baseRadius": 2,
+    "forestPenalty": 1,
+    "hillBonus": 1,
+    "minRadius": 1
+  },
+  "fog": {
+    "seeOwnArmies": true,
+    "scoutRevealsSizeBand": true
+  },
+  "sizeBands": {
+    "small": [1, 3],
+    "medium": [4, 6],
+    "large": [7, 99]
+  },
+  "objectiveTemplates": {
+    "seize": [
+      "Seize and hold the key junction in this region by the end of the battle.",
+      "Drive the enemy from the objective marker and secure it."
+    ],
+    "hold": [
+      "Hold the defensive line for the duration of the engagement.",
+      "Prevent the attacker from capturing your primary strongpoint."
+    ],
+    "destroy": [
+      "Destroy or break the enemy spearhead before they consolidate.",
+      "Eliminate the opposing command element (use an objective token as proxy)."
+    ],
+    "delay": [
+      "Delay the enemy advance — survive and contest until turn limit.",
+      "Buy time: keep at least one unit within scoring range until the end."
+    ]
+  },
+  "terrainNoteTemplates": [
+    "Layout: 4 pieces — central hill, two woods, one ruin. Open flank on the east.",
+    "Layout: urban cluster (3 buildings), a river/stream across mid-table, one bridge.",
+    "Layout: dense scrub and one large ruin; both flanks relatively open.",
+    "Layout: coastal scrub — 3 terrain pieces, long open approaches, one bunker/ruin.",
+    "Layout: swampy ground (rough patches), one elevated road, scattered woods."
+  ],
+  "missionNameTemplates": [
+    "Clash at {region}",
+    "Battle of {region}",
+    "Skirmish near {region}",
+    "Push for {region}",
+    "Stand at {region}"
+  ],
+  "forceHintTemplates": {
+    "small": ["Light detachment", "Raiding party", "Scout company"],
+    "medium": ["Battle group", "Combined arms column", "Reinforced company"],
+    "large": ["Full brigade", "Heavy assault force", "Corps detachment"]
+  }
+}
