@@ -1,4 +1,5 @@
-/* App shell: role switcher, panels, localStorage. Hex map v0.2. Loads data/*.json (with embedded fallback). */
+/* App shell: role switcher, panels, localStorage. Hex map v0.2. Loads data/*.json (with embedded fallback).
+   Map Systems v0.2 — does not roll OPR combat; MP/vision/terrain numbers are provisional. */
 (function () {
   const Game = () => window.Campaign.Game;
   const MapUI = () => window.Campaign.MapUI;

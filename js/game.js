@@ -1,5 +1,6 @@
 /* Core campaign logic for Map Systems v0.2 (axial hex / MP / vision).
-   Does NOT implement OPR combat dice — only briefs + accept reported results. */
+   Does NOT implement OPR combat dice — only briefs + accept reported results.
+   MP and terrain costs are provisional (data/rules.json). */
 (function (global) {
   const Game = {};
   const STATE_KEY = 'florida-campaign-vanilla-mvp-hex-v02';

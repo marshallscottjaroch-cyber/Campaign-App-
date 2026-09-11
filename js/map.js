@@ -1,4 +1,5 @@
-/* SVG axial hex map rendering — Map Systems v0.2. */
+/* SVG axial hex map rendering — Map Systems v0.2.
+   Terrain colors only; MP/terrain costs live in data/rules.json (provisional). */
 (function (global) {
   const MapUI = {};
 

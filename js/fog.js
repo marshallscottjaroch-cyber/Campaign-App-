@@ -1,4 +1,5 @@
-/* Vision / fog-of-war for Map Systems v0.2 — hex radius from friendly armies. */
+/* Vision / fog-of-war for Map Systems v0.2 — hex radius from friendly armies.
+   Vision integers are provisional (data/rules.json). */
 (function (global) {
   const Fog = {};
 
