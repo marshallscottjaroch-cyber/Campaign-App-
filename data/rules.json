@@ -1,5 +1,5 @@
 {
-  "_note": "PROVISIONAL balance placeholders — dial after playtest. Architecture (hex MP pathfinding, terrain/edge types, vision radius FoW) is locked; numeric values are NOT campaign defaults.",
+  "_note": "PROVISIONAL balance placeholders — dial after playtest. Architecture (hex MP pathfinding, terrain/edge types, vision radius FoW) is locked; numeric values are NOT campaign defaults. Play map is data/hexmap.json (data/map.json is legacy).",
   "turnLabel": "Campaign Week",
   "moveRates": {
     "_note": "provisional — dial after playtest",

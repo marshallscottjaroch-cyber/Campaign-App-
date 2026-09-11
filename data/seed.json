@@ -1,4 +1,5 @@
 {
+  "_note": "Starting armies and ownership for hex v0.2. After edits, use Reset demo so old browser saves are cleared.",
   "turn": 1,
   "turnPhase": "orders",
   "armies": [

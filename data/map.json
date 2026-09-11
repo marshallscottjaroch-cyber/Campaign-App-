@@ -1,4 +1,5 @@
 {
+  "_note": "LEGACY v0.1 region catalog. Not used for hex movement. Source of truth is data/hexmap.json.",
   "regions": [
     {
       "id": "pensacola",

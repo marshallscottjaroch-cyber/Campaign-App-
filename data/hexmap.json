@@ -4,7 +4,8 @@
     "orientation": "flat-top",
     "width": 20,
     "height": 32,
-    "description": "Compact stylized Florida theater for Map Systems v0.2"
+    "description": "Compact stylized Florida theater for Map Systems v0.2",
+    "_note": "Source of truth for play. data/map.json is the legacy v0.1 region catalog and is not used for movement."
   },
   "landmarks": [
     {
