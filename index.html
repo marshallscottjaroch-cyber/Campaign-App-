@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Florida Campaign — Vanilla MVP</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar" id="topbar"></header>
+    <main class="layout">
+      <section class="panel map-panel" id="map-panel" aria-label="Campaign map"></section>
+      <div class="side">
+        <section class="panel" id="orders-panel" hidden></section>
+        <section class="panel" id="umpire-panel" hidden></section>
+        <section class="panel" id="briefs-panel"></section>
+        <section class="panel" id="sitrep-panel"></section>
+      </div>
+    </main>
+    <footer class="footer muted small" id="footer"></footer>
+  </div>
+  <script src="js/fog.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
