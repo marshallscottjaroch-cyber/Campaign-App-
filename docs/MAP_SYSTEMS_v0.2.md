@@ -1,6 +1,6 @@
 # Map Systems v0.2 — Design Delta
 
-Delta to locked Campaign One-Pager v0.1. Does **not** change OPR briefs/results loop. No in-app OPR combat.
+Delta to locked Campaign One-Pager v0.1. How to run the demo: see README.md. MP / vision / terrain integers are provisional (`data/rules.json`); architecture below is locked. Does **not** change OPR briefs/results loop. No in-app OPR combat.
 
 ## Lock status (2026-09-11)
 - **LOCKED:** systems architecture — axial hex grid, MP pathfinding, terrain/edge types, river-needs-bridge, vision radius FoW, contact on same hex → existing briefs/results.

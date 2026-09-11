@@ -1,71 +1,81 @@
-# Florida Campaign App
+# Florida Campaign — Vanilla MVP (Hex Map Systems v0.2)
 
-**One-liner:** Two faction generals run a fog-of-war Florida **hex** campaign, issue OPR tabletop mission briefs, and update the map from reported battle results.
+**One-liner:** A web app for two faction generals to run a fog-of-war Florida **hex** map campaign, assign OPR tabletop mission briefs to players, and update the map from reported battle results.
 
-This repo is the playable **Map Systems v0.2** MVP. No build step. No package manager. Open `index.html` (or a tiny local server) and play.
+No build step. No package manager. No React.
 
-The app does **not** roll One Page Rules combat. It only issues briefs and accepts win / loss / draw.
+## Map Systems v0.2
 
-## What this version does
+- Axial **flat-top hex** theater (stylized Florida)
+- Free movement with **MP** pathfinding + terrain / river-edge costs
+- **Vision radius** FoW (observer terrain mods)
+- Contact = enemy armies on the **same hex** → existing OPR brief + W/L/D loop
 
-- Shared Florida **hex** theater (axial flat-top grid)
-- Two generals (Faction A / Faction B) + Player + Umpire roles
-- Move / scout / hold orders with **move-point** pathfinding
-- Fog of war from army **vision radius** (terrain mods)
-- Contact on the same hex → OPR mission brief (objective + terrain notes)
-- Report win / loss / draw → winner holds hex, loser retreats
-- Scouts reveal presence + size band (small / medium / large), not full lists
-- Rules live in `data/rules.json` so numbers can be tweaked without rewriting code
+**Architecture locked.** **Numbers not locked.** MP rates, vision radius, and terrain costs in `data/rules.json` are **provisional placeholders** (labeled `_note: provisional — dial after playtest`). They are TBD after playtest — not campaign defaults. See [docs/MAP_SYSTEMS_v0.2.md](docs/MAP_SYSTEMS_v0.2.md).
 
-**Out of v1:** supply, politics, navy, money, intrigue.
+## How to open
 
-## How to open (no engineering required)
+**From GitHub**
+
+1. Click **Code → Download ZIP**.
+2. Unzip the folder.
+3. Use Option A or B below.
 
 **Option A — open the file**
 
-1. On GitHub, click `index.html`.
-2. Click the raw file, save it with the rest of the folder, **or** download the repo ZIP: **Code → Download ZIP**.
-3. Unzip and open `index.html` in Chrome / Edge / Firefox.
+1. Open `index.html` in a modern browser.
+2. Built-in fallback data is used if remote JSON cannot load.
 
-If the full Florida hex map does not load from a `file://` page, use Option B.
+**Option B — simple static server (recommended)**
 
-**Option B — recommended**
+From this folder run:
 
-1. Download the ZIP (**Code → Download ZIP**) and unzip it.
-2. On a computer with Python, in that folder run: `python3 -m http.server 8080`
-3. Open http://localhost:8080/
+    python3 -m http.server 8080
 
-Progress is saved in the browser (`localStorage`). Use **Reset demo** in the Umpire panel after changing data files.
+Then visit http://localhost:8080/
+
+With a server, edits to `data/*.json` load on refresh (use **Reset demo** if you have saved progress).
 
 ## Demo click-path
 
-1. Start as **General A**.
-2. Click **Gator Cavalry** (hill hex north of Orlando).
-3. Click **Orlando** (reachable hexes highlight).
-4. Switch to **Umpire** → **Resolve turn**.
-5. Confirm a contact brief (labeled near Orlando).
-6. Report Attacker win, Attacker loss, or Draw.
-7. Map updates. Umpire **Advance to next week** when briefs are done.
-8. Optional: **Scout** an adjacent hex.
+1. Start as **General A** (default).
+2. Click **Gator Cavalry** in the orders list (starts on a hill hex north of Orlando).
+3. Reachable hexes highlight on the map. Click **Orlando** (or pick it under Move to) — cavalry can reach it within provisional MP.
+4. Switch role to **Umpire**.
+5. Click **Resolve turn** (moves → contacts → briefs).
+6. Confirm a contact brief appears (label uses nearest landmark, e.g. Orlando).
+7. Switch to **Player** (or stay on Umpire).
+8. Report Attacker win, Attacker loss, or Draw.
+9. Map updates: winner holds hex; loser retreats to an adjacent passable hex or is destroyed; draw = standoff (defender falls back adjacent when possible).
+10. As Umpire, click **Advance to next week** when all briefs are resolved.
+11. Optional: **Scout** an adjacent hex to reveal presence + size band only.
+12. **Reset demo** (Umpire panel) restores the seed.
 
-## Tweaking data (no rewrite)
+## Roles
+
+- **General A / B:** submit move / scout / hold orders; vision-fogged map
+- **Player:** read briefs; fight OPR off-app; report win/loss/draw
+- **Umpire:** resolve turn, advance week, reset, override reports
+
+The app does **not** roll OPR combat. It only issues briefs and accepts results.
+
+## Tweaking data
 
 - `data/hexmap.json` — hexes `{q,r,terrain,landmark?}`, river `edges` with `bridge`
-- `data/rules.json` — **provisional** MP rates, terrain costs, vision, size bands, brief templates
-- `data/seed.json` — starting armies, ownership, players, sitrep
-- `data/map.json` — legacy region catalog (reference only; hexmap is the source of truth)
+- `data/rules.json` — **provisional** `moveRates`, `terrainCosts`, `vision`, size bands, brief templates
+- `data/seed.json` — armies with `{q,r}`, ownership keys `"q,r"`, players, sitrep
+- `data/map.json` — legacy region catalog (kept for reference; hexmap is SoT for play)
 
-Balance numbers in `rules.json` are **placeholders** — dial after playtest. Architecture (hex MP, rivers need bridges, vision radius) is locked.
+After changing seed or hexmap, use **Reset demo** so old localStorage progress is cleared.
 
 ## Smoke test
 
-```
-node scripts/smoke-hex-v02.js
-```
+    node scripts/smoke-hex-v02.js
 
-Checks MP pathfinding, vision mods, river blocking, and contact → brief generation.
+Checks MP pathfinding, vision radius mods, river blocking, and contact → brief generation.
 
-## Docs
+## Out of v1
 
-- [One-Pager v0.1](docs/ONE_PAGER_v0.1.md) — locked product
-- [Map Systems v0.2](docs/MAP_SYSTEMS_v0.2.md) — hex movement / fog delta
+Supply, politics, navy, money, intrigue, road network, intervening LOS — not included.
+
+See `docs/MAP_SYSTEMS_v0.2.md` and `docs/ONE_PAGER_v0.1.md`.
