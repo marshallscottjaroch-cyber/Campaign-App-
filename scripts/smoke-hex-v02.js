@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * Smoke test for Map Systems v0.2 — movement costs, vision, river block, contact→brief.
+ * Play map is data/hexmap.json (data/map.json is legacy). MP/vision/terrain are provisional.
  * Run: node scripts/smoke-hex-v02.js
  */
 const fs = require('fs');
